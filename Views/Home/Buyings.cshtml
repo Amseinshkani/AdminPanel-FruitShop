@@ -1,0 +1,104 @@
+@model MVProduct
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Contact V1</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="/Buying/images/icons/favicon.ico" />
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="/Buying/css/util.css">
+	<link rel="stylesheet" type="text/css" href="/Buying/css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body style="background-color:black;">
+
+		<div class="contact1">
+			<div class="container-contact1">
+				<div class="contact1-pic js-tilt">
+					<img src="/fileupload/@Model.img" >
+				</div>
+
+				<form action="/Home/sabadm" method="post" style="direction:rtl;" class="contact1-form validate-form">
+					<span style="color:white;" class="contact1-form-title">
+						خرید محصول
+					</span>
+					<input type="text" asp-for="Id" style="display:none">
+					<div class="wrap-input1 validate-input">
+						<label style="color:white;float:right;" for="">نام میوه</label>
+						<input class="input1" type="text" asp-for="Name"  >
+						<span class="shadow-input1"></span>
+					</div>
+					<div class="wrap-input1 validate-input" data-validate="Name is required">
+						<label style="color:white;float:right;" for="">قیمت هر کیلو</label>
+						<input class="input1" type="text" asp-for="Price"  >
+						<span class="shadow-input1"></span>
+					</div>
+
+					<div class="wrap-input1 validate-input" data-validate="Name is required">
+						<label style="color:white;float:right;" for="">وزن درخواستی</label>
+						<input asp-for="Requestedweight" class="input1" type="text">
+						<span class="shadow-input1"></span>
+					</div>
+
+					<div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<label style="color:white;float:right;" for=""> وزن کل انبار</label>
+						<input class="input1" type="text" asp-for="Count"  >
+						<span class="shadow-input1"></span>
+					</div>
+
+					<div class="container-contact1-form-btn">
+						<button class="contact1-form-btn" type="submit">
+								ثبت داخل سبد خرید
+								<i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	
+
+
+	<!--===============================================================================================-->
+	<script src="/Buying/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/Buying/vendor/bootstrap/js/popper.js"></script>
+	<script src="/Buying/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/Buying/vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="/Buying/vendor/tilt/tilt.jquery.min.js"></script>
+	<script>
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-23581568-13');
+	</script>
+
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+
+</html>

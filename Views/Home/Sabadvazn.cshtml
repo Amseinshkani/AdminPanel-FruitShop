@@ -1,0 +1,70 @@
+@{
+    Layout = null;
+}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>سبد خرید</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="/sabad/css/style.css">
+
+</head>
+
+<body style="direction:rtl;">
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">سبد خرید</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="table-wrap">
+                        <table class="table table-bordered table-dark table-hover">
+                            <thead>
+                                <tr>
+                                    <th>اسم میوه</th>
+                                    <th>قیمت</th>
+                                    <th>قیمت کل</th>
+                                    <th>جزیات</th>
+                                    <th>تغییر</th>
+                                    <th>حذف</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.b)
+                                {
+
+                                    <tr>
+                                        <td>@item.Count</td>
+                                        <td>@item.Count</td>
+                                        <td>@item.Count</td>
+                                        <td>@item.Count</td>
+                                        <td>@item.Count</td>
+                                        <td>@item.Count</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<p class="alert alert-danger">@ViewBag.alert</p>
+</body>
+<script src="/sabad/js/jquery.min.js"></script>
+<script src="/sabad/js/popper.js"></script>
+<script src="/sabad/js/bootstrap.min.js"></script>
+<script src="/sabad/js/main.js"></script>
+
+</html>
